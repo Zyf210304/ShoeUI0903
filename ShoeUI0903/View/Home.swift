@@ -99,15 +99,75 @@ struct Home: View {
                     // Products...
                     ForEach(products) { product in
                         
-                        
+                        CardView(product: product)
                     }
                 }
                 
             }
             .padding()
+            //bottom tab bar approx padding
+            .padding(.bottom, 100)
         }
         
     }
+    
+    @ViewBuilder
+    func CardView(product: Product) -> some View {
+        
+        VStack(spacing: 15) {
+            
+            Button {
+                
+            } label: {
+                
+                Image(systemName: "suit.heart.fill")
+                    .font(.system(size: 13))
+                    .foregroundColor(product.isLiked ? .white : .gray)
+                    .padding(5)
+                    .background(
+                        
+                        Color.red.opacity(product.isLiked ? 1 : 0),
+                        in: Circle()
+                    )
+            }
+            .frame(maxWidth: .infinity,  alignment: .trailing)
+
+            Image(product.productImage)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
+                .rotationEffect(.init(degrees: -20))
+                .background(
+                
+                    ZStack {
+                    
+                        Circle()
+                        .fill(product.productBG)
+                        .padding(-10)
+                    //white inner circle
+                        Circle()
+                        .stroke(Color.white, lineWidth: 1.4)
+                        .padding(-3)
+                        
+                    }
+                )
+            
+            Text(product.productTitle)
+                .fontWeight(.semibold)
+                .padding(.top)
+            
+            Text(product.productPrice)
+                .font(.title2.bold())
+        
+        }
+        .padding()
+        .background(
+            
+            Color.white,
+            in: RoundedRectangle(cornerRadius: 12)
+        )
+    }
+    
     
     @ViewBuilder
     func SegmentButton(image:String, title: String) -> some View {
