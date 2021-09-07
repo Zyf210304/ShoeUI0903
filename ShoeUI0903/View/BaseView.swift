@@ -78,6 +78,8 @@ struct BaseView: View {
                         .shadow(color: Color.black.opacity(0.04), radius: 5, x: -5, y: -5)
                         .ignoresSafeArea(.container, edges: .bottom)
                 )
+            //hiding tab bar when detail opens..
+                .offset(y: baseData.showDetail ? 200 : 0)
                 
             
             

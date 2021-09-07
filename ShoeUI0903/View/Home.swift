@@ -100,6 +100,14 @@ struct Home: View {
                     ForEach(products) { product in
                         
                         CardView(product: product)
+                            .onTapGesture {
+                                
+                                withAnimation {
+                                    
+                                    baseData.currentProduct = product
+                                    baseData.showDetail = true
+                                }
+                            }
                     }
                 }
                 
@@ -108,6 +116,10 @@ struct Home: View {
             //bottom tab bar approx padding
             .padding(.bottom, 100)
         }
+        .overlay(
+            
+            DetailView(animation: animation).environmentObject(baseData)
+        )
         
     }
     
@@ -117,6 +129,7 @@ struct Home: View {
         VStack(spacing: 15) {
             
             Button {
+                
                 
             } label: {
                 
@@ -135,6 +148,7 @@ struct Home: View {
             Image(product.productImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .matchedGeometryEffect(id: product.productImage, in: animation)
                 .padding()
                 .rotationEffect(.init(degrees: -20))
                 .background(
@@ -158,6 +172,20 @@ struct Home: View {
             
             Text(product.productPrice)
                 .font(.title2.bold())
+            
+            HStack(spacing: 4) {
+                
+                ForEach(1...5, id: \.self) { index in
+                    
+                    Image(systemName: "star.fill")
+                        .font(.system(size: 9.5))
+                        .foregroundColor(product.productRating >= index ? .yellow : .gray.opacity(0.6))
+                }
+                
+                Text("(\(product.productRating).0)")
+                    .font(.caption.bold())
+                    .foregroundColor(.gray)
+            }
         
         }
         .padding()
@@ -165,6 +193,7 @@ struct Home: View {
             
             Color.white,
             in: RoundedRectangle(cornerRadius: 12)
+            
         )
     }
     

@@ -14,6 +14,9 @@ class baseViewModel: ObservableObject{
     
     @Published var homeTab = "Sneakers"
     
+    //detail view properties
+    @Published var currentProduct: Product?
+    @Published var showDetail = false
 }
 
 
