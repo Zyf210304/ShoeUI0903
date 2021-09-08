@@ -13,6 +13,7 @@ struct Home: View {
     @Namespace var animation
     @EnvironmentObject var baseData: baseViewModel
     
+    @State var products: [Product] = ProductsData
     
     var body: some View {
         
@@ -29,7 +30,6 @@ struct Home: View {
                         Image(systemName: "line.horizontal.3.decrease")
                             .resizable()
                             .frame(width: 35, height: 25)
-                            
                     }
 
                    
@@ -41,7 +41,6 @@ struct Home: View {
                                            
                         Image(systemName: "magnifyingglass")
                             .font(.title2)
-                            
                     }
                 }
                 .foregroundColor(.black)
@@ -130,6 +129,7 @@ struct Home: View {
             
             Button {
                 
+//                product.isLiked.toggle()
                 
             } label: {
                 

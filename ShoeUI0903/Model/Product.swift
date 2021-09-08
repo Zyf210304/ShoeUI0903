@@ -19,7 +19,7 @@ struct Product: Identifiable {
 }
 
 
-var products = [
+var ProductsData = [
 
     Product(productImage: "p1", productTitle: "Nike Air Max20", productPrice: "$240.0", productBG: Color("shoeBG1"), productRating: 4),
     Product(productImage: "p2", productTitle: "Excee Sneakers", productPrice: "$290.0", productBG: Color("shoeBG2"), productRating: 3),

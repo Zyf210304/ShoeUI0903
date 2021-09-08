@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02BAD0C126E7384900D21022 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BAD0C026E7384900D21022 /* DetailView.swift */; };
+		02BAD0C326E74D5700D21022 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BAD0C226E74D5700D21022 /* HomeCardView.swift */; };
 		02E910A826E1EBF3002F8736 /* ShoeUI0903App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E910A726E1EBF3002F8736 /* ShoeUI0903App.swift */; };
 		02E910AA26E1EBF3002F8736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E910A926E1EBF3002F8736 /* ContentView.swift */; };
 		02E910AC26E1EBF4002F8736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02E910AB26E1EBF4002F8736 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		02BAD0C026E7384900D21022 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		02BAD0C226E74D5700D21022 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		02E910A426E1EBF3002F8736 /* ShoeUI0903.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeUI0903.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E910A726E1EBF3002F8736 /* ShoeUI0903App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeUI0903App.swift; sourceTree = "<group>"; };
 		02E910A926E1EBF3002F8736 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				02E910B826E1F04C002F8736 /* BaseView.swift */,
 				02E910BC26E1F853002F8736 /* CustomCurveShape.swift */,
 				02E910BE26E1FBCA002F8736 /* Home.swift */,
+				02BAD0C226E74D5700D21022 /* HomeCardView.swift */,
 				02BAD0C026E7384900D21022 /* DetailView.swift */,
 			);
 			path = View;
@@ -184,6 +187,7 @@
 				02E910BB26E1F06E002F8736 /* baseViewModel.swift in Sources */,
 				02E910BD26E1F854002F8736 /* CustomCurveShape.swift in Sources */,
 				02E910AA26E1EBF3002F8736 /* ContentView.swift in Sources */,
+				02BAD0C326E74D5700D21022 /* HomeCardView.swift in Sources */,
 				02E910BF26E1FBCA002F8736 /* Home.swift in Sources */,
 				02E910A826E1EBF3002F8736 /* ShoeUI0903App.swift in Sources */,
 				02E910C126E20F4E002F8736 /* Product.swift in Sources */,
